@@ -1,18 +1,20 @@
+//variables for buttons
 const cat_btn = document.querySelector('#cat_btn');
 
 const dog_btn = document.querySelector('#dog_btn');
-
+//variables for animal placeholders
 const cat_result = document.querySelector("#cat_result")//same as querySelector(".result") 
 const dog_result = document.getElementById('dog_result');
-
+//add  onClickevents to buttons
 cat_btn.addEventListener('click', getRandomCat);
 
 dog_btn.addEventListener('click', getRandomDog);
+ //functions for onclicks
     
 // https://github.com/public-apis/public-apis
 function getRandomCat() {
 
-	fetch('https://aws.random.cat/meow')
+	fetch('https://aws.random.cat/meow')	
 		.then(res => res.json())
 
 		.then(data => {
