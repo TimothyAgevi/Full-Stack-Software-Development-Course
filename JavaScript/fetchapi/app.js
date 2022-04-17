@@ -2,7 +2,7 @@ const cat_btn = document.querySelector('#cat_btn');
 
 const dog_btn = document.querySelector('#dog_btn');
 
-const cat_result = document.qetElementById("cat_result")
+const cat_result = document.querySelector("#cat_result")//same as querySelector(".result") 
 const dog_result = document.getElementById('dog_result');
 
 cat_btn.addEventListener('click', getRandomCat);
@@ -16,9 +16,9 @@ function getRandomCat() {
 		.then(res => res.json())
 
 		.then(data => {
-			cat_result.innerHTML = `<img src=${data.file} alt="cat" /> `
+			cat_result.innerHTML = `
 
-									
+									<img src=${data.file} alt="cat" /> `
 		});
 
 }
